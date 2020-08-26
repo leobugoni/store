@@ -11,4 +11,10 @@
 	<artifactId>1entities</artifactId>
 	<version>${project.parent.version}</version>
 
+	<dependencies>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+		</dependency>
+	</dependencies>
 </project>
