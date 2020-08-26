@@ -14,10 +14,10 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>application</module>
-		<module>entities</module>
-		<module>adapters</module>
-		<module>use-cases</module>
+		<module>1entities</module> <!-- Primeira Cadama Interna -->
+		<module>2use-cases</module> <!-- Segunda Cadama Interna -->
+		<module>3adapters</module> <!-- Terceira Cadama Interna -->
+		<module>4infrastructure</module> <!-- Quarta Cadama Interna -->
 	</modules>
 
 <!--	<dependencyManagement>-->
@@ -46,11 +46,7 @@
 <!--	</dependencyManagement>-->
 
 	<dependencies>
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
-		</dependency>
+
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
