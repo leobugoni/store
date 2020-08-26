@@ -1,6 +1,5 @@
 package io.github.leobugoni.entities.model;
 
-
 import lombok.*;
 
 import javax.persistence.Entity;

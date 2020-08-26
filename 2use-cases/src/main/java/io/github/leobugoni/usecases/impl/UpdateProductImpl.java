@@ -3,8 +3,6 @@ package io.github.leobugoni.usecases.impl;
 import io.github.leobugoni.entities.model.Product;
 import io.github.leobugoni.entities.model.ProductRepository;
 import io.github.leobugoni.usecases.UpdateProduct;
-import io.github.leobugoni.usecases.request.ProductRequest;
-import io.github.leobugoni.usecases.response.ProductResonse;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -20,11 +18,11 @@ public class UpdateProductImpl implements UpdateProduct {
     }
 
     @Override
-    public ProductResonse execute(Long id, ProductRequest productRequest) {
+    public Product execute(Long id, Product newProduct) {
         Product product = productRepository.findProduct(id);
-        product.setDescription(productRequest.getDescription());
-        product.setName(productRequest.getName());
-        product.setQuantity(productRequest.getQuantity());
-        return ProductResonse.fromEntity(productRepository.saveProduct(product));
+        product.setDescription(newProduct.getDescription());
+        product.setName(newProduct.getName());
+        product.setQuantity(newProduct.getQuantity());
+        return productRepository.saveProduct(product);
     }
 }

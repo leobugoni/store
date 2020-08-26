@@ -1,8 +1,8 @@
 package io.github.leobugoni.usecases.impl;
 
+import io.github.leobugoni.entities.model.Product;
 import io.github.leobugoni.entities.model.ProductRepository;
 import io.github.leobugoni.usecases.FindProduct;
-import io.github.leobugoni.usecases.response.ProductResonse;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -18,7 +18,7 @@ public class FindProductImpl implements FindProduct {
     }
 
     @Override
-    public ProductResonse execute(Long id) {
-        return ProductResonse.fromEntity(productRepository.findProduct(id));
+    public Product execute(Long id) {
+        return productRepository.findProduct(id);
     }
 }

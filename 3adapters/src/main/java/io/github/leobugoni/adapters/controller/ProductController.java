@@ -1,12 +1,11 @@
 package io.github.leobugoni.adapters.controller;
 
 
+import io.github.leobugoni.entities.model.Product;
 import io.github.leobugoni.usecases.DeleteProduct;
 import io.github.leobugoni.usecases.FindProduct;
 import io.github.leobugoni.usecases.SaveProduct;
 import io.github.leobugoni.usecases.UpdateProduct;
-import io.github.leobugoni.usecases.request.ProductRequest;
-import io.github.leobugoni.usecases.response.ProductResonse;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -26,17 +25,17 @@ public class ProductController {
     }
 
     @PostMapping
-    public ProductResonse saveProduct(@RequestBody ProductRequest productRequest){
-        return saveProduct.execute(productRequest);
+    public Product saveProduct(@RequestBody Product product){
+        return saveProduct.execute(product);
     }
 
     @PutMapping(path = "/{id}")
-    public ProductResonse updateProduct(@PathVariable Long id, @RequestBody ProductRequest productRequest){
-        return updateProduct.execute(id, productRequest);
+    public Product updateProduct(@PathVariable Long id, @RequestBody Product product){
+        return updateProduct.execute(id, product);
     }
 
     @GetMapping(path = "/{id}")
-    public ProductResonse findProduct(@PathVariable Long id){
+    public Product findProduct(@PathVariable Long id){
         return findProduct.execute(id);
     }
 

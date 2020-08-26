@@ -1,10 +1,9 @@
 package io.github.leobugoni.usecases;
 
-import io.github.leobugoni.usecases.request.ProductRequest;
-import io.github.leobugoni.usecases.response.ProductResonse;
+import io.github.leobugoni.entities.model.Product;
 
 public interface SaveProduct {
 
-    ProductResonse execute(ProductRequest productRequest);
+    Product execute(Product product);
 
 }

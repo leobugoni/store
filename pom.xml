@@ -20,47 +20,7 @@
 		<module>4infrastructure</module> <!-- Quarta Cadama Interna -->
 	</modules>
 
-<!--	<dependencyManagement>-->
-<!--		<dependencies>-->
-<!--			<dependency>-->
-<!--				<groupId>io.github.leobugoni</groupId>-->
-<!--				<artifactId>application</artifactId>-->
-<!--				<version>{$project.version}</version>-->
-<!--			</dependency>-->
-<!--			<dependency>-->
-<!--				<groupId>io.github.leobugoni</groupId>-->
-<!--				<artifactId>entities</artifactId>-->
-<!--				<version>{$project.version}</version>-->
-<!--			</dependency>-->
-<!--			<dependency>-->
-<!--				<groupId>io.github.leobugoni</groupId>-->
-<!--				<artifactId>repository</artifactId>-->
-<!--				<version>{$project.version}</version>-->
-<!--			</dependency>-->
-<!--			<dependency>-->
-<!--				<groupId>io.github.leobugoni</groupId>-->
-<!--				<artifactId>rest</artifactId>-->
-<!--				<version>{$project.version}</version>-->
-<!--			</dependency>-->
-<!--		</dependencies>-->
-<!--	</dependencyManagement>-->
-
 	<dependencies>
-
-
-
-
-
-
-
-
-
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
-		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -76,33 +36,6 @@
 
 	<build>
 		<finalName>{$project.artifactId}</finalName>
-		<plugins>
-			<plugin>
-				<groupId>org.asciidoctor</groupId>
-				<artifactId>asciidoctor-maven-plugin</artifactId>
-				<version>1.5.8</version>
-				<executions>
-					<execution>
-						<id>generate-docs</id>
-						<phase>prepare-package</phase>
-						<goals>
-							<goal>process-asciidoc</goal>
-						</goals>
-						<configuration>
-							<backend>html</backend>
-							<doctype>book</doctype>
-						</configuration>
-					</execution>
-				</executions>
-				<dependencies>
-					<dependency>
-						<groupId>org.springframework.restdocs</groupId>
-						<artifactId>spring-restdocs-asciidoctor</artifactId>
-						<version>${spring-restdocs.version}</version>
-					</dependency>
-				</dependencies>
-			</plugin>
-		</plugins>
 	</build>
 
 </project>

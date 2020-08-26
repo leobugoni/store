@@ -1,9 +1,8 @@
 package io.github.leobugoni.usecases.impl;
 
+import io.github.leobugoni.entities.model.Product;
 import io.github.leobugoni.entities.model.ProductRepository;
 import io.github.leobugoni.usecases.SaveProduct;
-import io.github.leobugoni.usecases.request.ProductRequest;
-import io.github.leobugoni.usecases.response.ProductResonse;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -19,7 +18,7 @@ public class SaveProductImpl implements SaveProduct {
     }
 
     @Override
-    public ProductResonse execute(ProductRequest productRequest) {
-        return ProductResonse.fromEntity(productRepository.saveProduct(productRequest.toEntity()));
+    public Product execute(Product product) {
+        return productRepository.saveProduct(product);
     }
 }
