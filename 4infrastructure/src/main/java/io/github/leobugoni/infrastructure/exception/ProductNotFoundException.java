@@ -1,4 +1,4 @@
-package io.github.leobugoni.infrasctructure.exception;
+package io.github.leobugoni.infrastructure.exception;
 
 public class ProductNotFoundException extends RuntimeException{
 

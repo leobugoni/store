@@ -1,12 +1,10 @@
 package io.github.leobugoni.usecases.response;
 
 import io.github.leobugoni.entities.model.Product;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 @Data
+@Builder
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor

@@ -8,4 +8,6 @@ public interface ProductRepository {
 
     Product updateProduct(Product product);
 
+    void deleteProduct(Long id);
+
 }

@@ -9,17 +9,18 @@
 	</parent>
 	<packaging>jar</packaging>
 	<artifactId>2use-cases</artifactId>
-	<version>${parent.version}</version>
+	<version>${project.parent.version}</version>
 
 	<dependencies>
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+			<version>1</version>
+		</dependency>
 		<dependency>
 			<groupId>io.github.leobugoni</groupId>
 			<artifactId>1entities</artifactId>
 			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 	</dependencies>
 

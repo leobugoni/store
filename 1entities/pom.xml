@@ -9,13 +9,6 @@
 	</parent>
 	<packaging>jar</packaging>
 	<artifactId>1entities</artifactId>
-	<version>${parent.version}</version>
-
-	<dependencies>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-core</artifactId>
-        </dependency>
-    </dependencies>
+	<version>${project.parent.version}</version>
 
 </project>
